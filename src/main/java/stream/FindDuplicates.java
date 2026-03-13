@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static java.lang.System.*;
+
 public class FindDuplicates {
 
     public static void main(String[] args) {
@@ -16,7 +18,7 @@ public class FindDuplicates {
                 .filter(n -> !seen.add(n))
                 .collect(Collectors.toSet());
 
-        duplicates.forEach(System.out::println);
+        duplicates.forEach(out::println);
 
     }
 

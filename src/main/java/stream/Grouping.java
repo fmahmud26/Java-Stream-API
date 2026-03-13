@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static java.lang.System.*;
+
 public class Grouping {
 
     public static void main(String[] args) {
@@ -18,9 +20,9 @@ public class Grouping {
                 .collect(Collectors.groupingBy(Employee::department));
 
         byDept.forEach((dept, emps) -> {
-            System.out.println("Department: " + dept);
-            emps.forEach(emp -> System.out.println(emp.name + " - " + emp.designation));
-            System.out.println("====================");
+            out.println("Department: " + dept);
+            emps.forEach(emp -> out.println(emp.name + " - " + emp.designation));
+            out.println("====================");
         });
 
     }

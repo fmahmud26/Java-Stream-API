@@ -3,6 +3,8 @@ package stream;
 import java.util.Comparator;
 import java.util.List;
 
+import static java.lang.System.*;
+
 public class FindSecondHighestNumber {
 
     public static void main(String[] args) {
@@ -16,7 +18,7 @@ public class FindSecondHighestNumber {
                 .findFirst()
                 .orElseThrow();
 
-        System.out.println(secondMax);
+        out.println(secondMax);
 
     }
 

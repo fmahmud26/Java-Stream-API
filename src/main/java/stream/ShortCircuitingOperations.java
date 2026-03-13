@@ -2,6 +2,8 @@ package stream;
 
 import java.util.List;
 
+import static java.lang.System.*;
+
 public class ShortCircuitingOperations {
 
     public static void main(String[] args) {
@@ -9,15 +11,12 @@ public class ShortCircuitingOperations {
         List<Integer> list = List.of(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
 
         // Any Match
-        var anyMatch = list.stream()
-                .anyMatch(n -> n > 10);
+        var anyMatch = list.stream().anyMatch(n -> n > 10);
 
-        System.out.println("AnyMatch: " + anyMatch);
+        out.println("AnyMatch: " + anyMatch);
 
         // Limit
-        list.stream()
-                .limit(5)
-                .forEach(System.out::println);
+        list.stream().limit(5).forEach(out::println);
 
     }
 

@@ -2,6 +2,8 @@ package stream;
 
 import java.util.List;
 
+import static java.lang.System.*;
+
 public class Sum {
 
     public static void main(String[] args) {
@@ -12,7 +14,7 @@ public class Sum {
                 .mapToInt(Integer::intValue)
                 .sum();
 
-        System.out.println(sum);
+        out.println(sum);
     }
 
 }

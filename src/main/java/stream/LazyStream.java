@@ -2,6 +2,8 @@ package stream;
 
 import java.util.List;
 
+import static java.lang.System.*;
+
 public class LazyStream {
 
     public static void main(String[] args) {
@@ -10,16 +12,16 @@ public class LazyStream {
 
         Integer result = numbers.stream()
                 .filter(n -> {
-                    System.out.println("Filter: " + n);
+                    out.println("Filter: " + n);
                     return n > 3;
                 })
                 .map(n -> {
-                    System.out.println("Map: " + n);
+                    out.println("Map: " + n);
                     return n * 2;
                 })
                 .findFirst().orElse(null);
 
-        System.out.println(result);
+        out.println(result);
     }
 
 }

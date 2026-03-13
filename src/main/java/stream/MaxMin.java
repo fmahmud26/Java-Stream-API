@@ -2,6 +2,8 @@ package stream;
 
 import java.util.List;
 
+import static java.lang.System.*;
+
 public class MaxMin {
 
     public static void main(String[] args) {
@@ -16,8 +18,8 @@ public class MaxMin {
                 .min(Integer::compareTo)
                 .orElse(0);
 
-        System.out.println("Max: " + max);
-        System.out.println("Min: " + min);
+        out.println("Max: " + max);
+        out.println("Min: " + min);
 
     }
 

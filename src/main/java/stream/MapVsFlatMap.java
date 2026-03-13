@@ -2,6 +2,8 @@ package stream;
 
 import java.util.List;
 
+import static java.lang.System.*;
+
 public class MapVsFlatMap {
 
     public static void main(String[] args) {
@@ -11,7 +13,7 @@ public class MapVsFlatMap {
 
         names.stream()
                 .map(String::toUpperCase)
-                .forEach(System.out::println);
+                .forEach(out::println);
 
         // FlatMap Example
         List<List<String>> list = List.of(
@@ -21,7 +23,7 @@ public class MapVsFlatMap {
 
         list.stream()
                 .flatMap(List::stream)
-                .forEach(System.out::println);
+                .forEach(out::println);
 
     }
 

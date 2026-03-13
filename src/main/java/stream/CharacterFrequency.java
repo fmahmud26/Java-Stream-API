@@ -3,6 +3,8 @@ package stream;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static java.lang.System.*;
+
 public class CharacterFrequency {
 
     public static void main(String[] args) {
@@ -13,7 +15,7 @@ public class CharacterFrequency {
                 .mapToObj(c -> (char) c)
                 .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
 
-        freq.forEach((c, n) -> System.out.println(c + ": " + n));
+        freq.forEach((c, n) -> out.println(c + ": " + n));
 
     }
 

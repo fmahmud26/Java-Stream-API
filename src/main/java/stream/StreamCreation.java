@@ -34,4 +34,5 @@ public class StreamCreation {
         Stream<Integer> integerStream = random.ints(5, 1, 100).boxed();
         integerStream.forEach(out::println);
     }
+
 }

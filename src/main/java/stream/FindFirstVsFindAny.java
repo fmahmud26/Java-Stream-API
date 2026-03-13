@@ -3,6 +3,8 @@ package stream;
 import java.util.List;
 import java.util.Optional;
 
+import static java.lang.System.*;
+
 public class FindFirstVsFindAny {
 
     public static void main(String[] args) {
@@ -12,8 +14,8 @@ public class FindFirstVsFindAny {
         Optional<Integer> first = list.stream().findFirst();
         Optional<Integer> any = list.parallelStream().findAny();
 
-        System.out.println("First: " + first.orElse(null));
-        System.out.println("Any: " + any.orElse(null));
+        out.println("First: " + first.orElse(null));
+        out.println("Any: " + any.orElse(null));
 
     }
 

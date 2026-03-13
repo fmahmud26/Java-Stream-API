@@ -4,6 +4,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
+import static java.lang.System.*;
+
 public class PartitionEvenOdd {
 
     public static void main(String[] args) {
@@ -13,7 +15,7 @@ public class PartitionEvenOdd {
         Map<Boolean, List<Integer>> result = list.stream()
                 .collect(Collectors.partitioningBy(n -> n % 2 == 0));
 
-        result.forEach((key, value) -> System.out.println("Key: " + key + " , Value: " + value));
+        result.forEach((key, value) -> out.println("Key: " + key + " , Value: " + value));
 
     }
 
